@@ -6,7 +6,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 * Thiago Cedro Silva de Souza
 * Pedro Rodrigues Duarte
-* Nome completo do aluno 3
+* Pedro Henrique Bellone Souza e Silva
 * Nome completo do aluno 4
 
 ## Professores responsáveis

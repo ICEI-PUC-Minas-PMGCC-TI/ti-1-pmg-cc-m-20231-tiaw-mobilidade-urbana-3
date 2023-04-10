@@ -8,6 +8,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * Pedro Rodrigues Duarte
 * Pedro Henrique Bellone Souza e Silva
 * Welbert Junio Afonso de Almeida 
+* Lucas Fonseca Jardim
 
 ## Professores responsáveis
 

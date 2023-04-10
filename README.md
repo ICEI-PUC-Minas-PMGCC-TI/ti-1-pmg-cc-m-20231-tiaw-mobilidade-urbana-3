@@ -7,7 +7,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * Thiago Cedro Silva de Souza
 * Pedro Rodrigues Duarte
 * Pedro Henrique Bellone Souza e Silva
-* Nome completo do aluno 4
+* Welbert Junio Afonso de Almeida 
 
 ## Professores responsáveis
 

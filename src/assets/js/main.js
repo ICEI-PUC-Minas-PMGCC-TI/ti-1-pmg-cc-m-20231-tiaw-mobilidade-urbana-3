@@ -5,12 +5,17 @@ const db = () => {
     if(strData) {
         objData = JSON.parse(strData)
     } else { //static location example to show users info.
-        objData = { users : [
+        objData = { passageiros : [
             {nome: "Roger Guedes",   email: "Roger@static.com",  cpf:"12345678909", telefone: "94999035131"},
             {nome: "Yuri Alberto",   email: "Yuri@static.com",   cpf:"12345678909", telefone: "94999035131"},
             {nome: "Cassio Ramos",   email: "Cassio@static.com", cpf:"12345678909", telefone: "94999035131"},
             {nome: "Renato Augusto", email: "Renato@static.com", cpf:"12345678909", telefone: "94999035131"}
-        ]}
+
+            ],
+            motorista : [
+                {nome: "Mauro Cezar", email: "mauro@static.com", cpf:"12345678909", telefone:"94999035131", 
+                cnhB:"1234567", placaVeiculo: "ABC1234", capacidadeVeiculo:"15" } 
+            ]}
     }
     return objData
 }
@@ -24,22 +29,38 @@ function convertUsersToHtml() {
     let strHtml = ''
     let objData = db.call()
 
-    for(i=0; i < objData.users.length; i++) {
-        strHtml += `<li class="user motorista">
+    for(i=0; i < objData.passageiros.length; i++) {
+        strHtml += `<li class="user passageiro">
                         <div class="detail">
                             <ol class="types">
                                 <li class="type passageiro">passageiro</li> 
                             </ol>
                         </div>
-                        <span class="name"><br>Nome: ${objData.users[i].nome}</span>
-                        <span class="email">Email: ${objData.users[i].email}</span>
-                        <span class="telefone">Telefone: ${objData.users[i].telefone}</span>
-                        <span class="cpf">CPF: ${objData.users[i].cpf}</span>
+                        <span class="name"><br>Nome: ${objData.passageiros[i].nome}</span>
+                        <span class="email">Email: ${objData.passageiros[i].email}</span>
+                        <span class="telefone">Telefone: ${objData.passageiros[i].telefone}</span>
+                        <span class="cpf">CPF: ${objData.passageiros[i].cpf}</span>
+                    </li>`
+    }
+    for(i=0; i < objData.motorista.length; i++) {
+        strHtml += `<li class="user motorista">
+                        <div class="detail">
+                            <ol class="types">
+                                <li class="type motorista">motorista</li> 
+                            </ol>
+                        </div>
+                        <span class="name"><br>Nome: ${objData.motorista[i].nome}</span>
+                        <span class="email">Email: ${objData.motorista[i].email}</span>
+                        <span class="telefone">Telefone: ${objData.motorista[i].telefone}</span>
+                        <span class="cpf">CPF: ${objData.motorista[i].cpf}</span>
+                        <span class="cpf">CNH: ${objData.motorista[i].cnhB}</span>
+                        <span class="cpf">PLACA: ${objData.motorista[i].placaVeiculo}</span>
                     </li>`
     }
     
     html.innerHTML = strHtml
 }
 
-document.getElementById('btnShowContacts').addEventListener('click', convertUsersToHtml)
-document.getElementById('btnIncluirRegistro').addEventListener('click', insert_user)
+document.getElementById('btnShowUsers').addEventListener('click', convertUsersToHtml)
+document.getElementById('btnIncluirPassageiro').addEventListener('click', inserir_passageiro)
+document.getElementById('btnIncluirMotorista').addEventListener('click', inserir_motorista)

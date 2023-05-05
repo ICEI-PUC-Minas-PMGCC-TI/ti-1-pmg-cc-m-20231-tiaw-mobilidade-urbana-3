@@ -35,14 +35,13 @@
     h1 {
         display: inline;
     }
-    .pagination button{
-        display: inline;
+    
+    .pagination{
+        display: block
     }
 
-    .content-main registro{
-        display: inline;
-        padding: .100rem;
-        margin-bottom: 0;
+    .content-main registro input{
+        display: inline-block;
     }
     .users {
         grid-template-columns: 1fr 1fr 1fr 1fr;

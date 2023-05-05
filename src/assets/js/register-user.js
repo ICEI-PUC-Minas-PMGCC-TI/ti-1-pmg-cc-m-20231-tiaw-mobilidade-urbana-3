@@ -1,4 +1,4 @@
-function registrarPassageiro() {
+const novo_passageiro = ()  => {
     let passageiro = new Passageiro()
 
     passageiro.nome     = document.getElementById('reg-nome').value
@@ -12,7 +12,7 @@ function registrarPassageiro() {
     return passageiro
 }
 
-function registrarMotorista() {
+const novo_motorista = () => {
     let motorista = new Motorista();
   
     motorista.nome                  = document.getElementById('reg-nome').value
@@ -29,11 +29,20 @@ function registrarMotorista() {
     return motorista
 }
 
-function insert_user() {
+function inserir_passageiro() {
     let objData = db.call()
 
-    let pass = registrarPassageiro();
-    objData.users.push(pass)
+    let pass = novo_passageiro.call();
+    objData.passageiros.push(pass)
+
+    salvarDados(objData)
+}
+
+function inserir_motorista() {
+    let objData = db.call()
+
+    let mot = novo_motorista.call();
+    objData.motorista.push(mot)
 
     salvarDados(objData)
 }

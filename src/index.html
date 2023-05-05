@@ -18,9 +18,9 @@
 </head>
 <body>
     <main class="content-main" >
-        <h1>REGISTRO</h1>
+        <h1>REGISTRO PASSAGEIRO</h1>
     
-        <div id="registro" class="content-main">
+        <div id="registro passageiro" class="content-main">
             <input type="text" id="reg-nome" class="input"    placeholder="NOME">
             <input type="email" id="reg-email"class="input"   placeholder="EMAIL">
             <input type="password" id="reg-pass"class="input" placeholder="SENHA">
@@ -28,8 +28,28 @@
             <input type="text" id="reg-cpf"class="input"      placeholder="CPF">
                 
         </div>
+        
+        <div class="pagination" id="btnIncluirPassageiro">
+            <div class="">
+                <button id="btnIncluirRegistro" type="button" >
+                    REGISTRAR
+                </button>
+            </div>
+        </div>
 
-        <div class="pagination" id="btnIncluirContato">
+        <h1>REGISTRO MOTORISTA</h1>
+        <div id="registro motorista" class="content-main">
+            <input type="text" id="reg-nome" class="input"     placeholder="NOME">
+            <input type="email" id="reg-email"class="input"    placeholder="EMAIL">
+            <input type="password" id="reg-pass"class="input"  placeholder="SENHA">
+            <input type="tel" id="reg-tel" class="input"       placeholder="TELEFONE">
+            <input type="text" id="reg-cpf"class="input"       placeholder="CPF">
+            <input type="text" id="reg-cnhB"class="input"      placeholder="CNH">
+            <input type="number" id="reg-cap"class="input" placeholder="Capacidade do Veiculo">
+            <input type="text" id="reg-placaVeic"class="input" placeholder="Placa Do Veiculo">
+        </div>
+
+        <div class="pagination" id="btnIncluirMotorista">
             <div class="">
                 <button id="btnIncluirRegistro" type="button" >
                     REGISTRAR
@@ -59,7 +79,7 @@
             <h1>USUÁRIOS CADASTRADOS</h1>
 
             <ul id="userList" class="users">
-                <!-- users here -->
+                <!-- Passageiro aqui -->
                 
             </ul>
 
@@ -67,8 +87,8 @@
             <!-- Button -->
             <div class="pagination">
                 <div class="">
-                    <button id="btnShowContacts" type="button" >
-                        Show Contacts
+                    <button id="btnShowUsers" type="button" >
+                        Mostrar Usuários
                     </button>
                 </div>
             </div>

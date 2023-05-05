@@ -2,6 +2,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -12,14 +13,38 @@ body {
     column-width:  50%;
 }
 
+/* .registrar-conta .link-pages a{
+        font-size: 100px;
+} */
+
 .content-main {
     background-color: white;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     padding: 1rem;
+}
+
+.content-reg {
+    background-color: #98d5d7;
+    padding: .5rem;
+    align-items: center;
+    margin: .5rem 0;
+
+}
+
+.content-reg h1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: .9rem;
+
+}
+
+.content-reg a{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: .9rem;
+
 }
 
 h1 {
@@ -79,6 +104,7 @@ input {
 
 }
 
+
 .pagination button{
     padding: .25rem .5rem;
     margin: .25rem 0;
@@ -87,6 +113,7 @@ input {
     border: none;
     border-radius: 1rem;
     color: #fff;
+    display: flex
     
 }
 
@@ -129,5 +156,15 @@ input {
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
+    }
+
+    .content-reg {
+        text-align: center;
+    }
+
+    .content-reg a {
+        display: inline;
+        font-size: 30px;
+        justify-content: space-between;
     }
 }

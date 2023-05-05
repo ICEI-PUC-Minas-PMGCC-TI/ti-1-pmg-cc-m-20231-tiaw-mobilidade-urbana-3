@@ -16,11 +16,17 @@
     background-color: #98d5d7; 
 }
 
-
-
 @media screen and (min-width: 380px) {
     .users{
         grid-template-columns: 1fr 
+    }
+
+    .content-main {
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
     }
 }
 /* On screens that are 576px or less*/

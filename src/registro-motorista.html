@@ -18,36 +18,28 @@
 </head>
 <body>
     <main class="content-main" >
-        <h1>Entrar</h1>
-        <input type="email"    placeholder="Seu Email:" id="input-email">
-        <input type="password" placeholder="Sua Senha:" id="input-senha">
-        
-        
-        <div class="pagination" id="btnLogin">
+        <h1>REGISTRO MOTORISTA</h1>
+        <div id="registro motorista" class="content-main">
+            <input type="text" id="reg-nome" class="input"     placeholder="NOME">
+            <input type="email" id="reg-email"class="input"    placeholder="EMAIL">
+            <input type="password" id="reg-pass"class="input"  placeholder="SENHA">
+            <input type="tel" id="reg-tel" class="input"       placeholder="TELEFONE">
+            <input type="text" id="reg-cpf"class="input"       placeholder="CPF">
+            <input type="text" id="reg-cnhB"class="input"      placeholder="CNH">
+            <input type="number" id="reg-cap"class="input" placeholder="Capacidade do Veiculo">
+            <input type="text" id="reg-placaVeic"class="input" placeholder="Placa Do Veiculo">
+        </div>
+
+        <div class="pagination" id="btnIncluirMotorista">
             <div class="">
-                <button id="btnEntrar" type="button" >
-                    ENTRAR
+                <button id="btnIncluirRegistro" type="button" >
+                    REGISTRAR
                 </button>
             </div>
         </div>
-            
-        <div id="register-conta" >
-            <h1>Crie uma conta!</h1>
-            <a id="link-pages" href="registro-passageiro.html">Passageiro</a>
-            <a id="link-pages" href="registro-motorista.html" >Motorista</a>
-        </div>
-            
     </main>
 
-    <section>
-        <!-- lista de cadastrados -->
-        <main id="content">
-            <!-- acesso para usuario -->
-        </main>
-    </section>
-
     <!-- js -->
-    <script src="assets/js/login-authentication.js"></script>
     <script src="assets/js/register-user.js"></script>
     <script src="assets/js/model-user.js"></script>
     <script src="assets/js/main.js"></script>

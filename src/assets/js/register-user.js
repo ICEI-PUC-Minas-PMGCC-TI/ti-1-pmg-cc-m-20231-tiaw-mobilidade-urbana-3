@@ -1,4 +1,4 @@
-const novo_passageiro = ()  => {
+const novo_passageiro = () => {
     let passageiro = new Passageiro()
 
     passageiro.nome     = document.getElementById('reg-nome').value

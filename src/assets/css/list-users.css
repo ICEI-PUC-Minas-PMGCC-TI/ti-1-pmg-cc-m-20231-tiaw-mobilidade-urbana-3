@@ -43,6 +43,7 @@
     .content-main registro input{
         display: inline-block;
     }
+    
     .users {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }

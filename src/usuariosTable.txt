@@ -17,37 +17,28 @@
     <title>SysAdmin</title>
 </head>
 <body>
-    <main class="content-main" >
-        <h1>Entrar</h1>
-        <input type="email"    placeholder="Seu Email:" id="input-email">
-        <input type="password" placeholder="Sua Senha:" id="input-senha">
-        
-        
-        <div class="pagination" id="btnLogin">
-            <div class="">
-                <button id="btnEntrar" type="button" >
-                    ENTRAR
-                </button>
-            </div>
-        </div>
-            
-        <div id="register-conta" >
-            <h1>Crie uma conta!</h1>
-            <a id="link-pages" href="registro-passageiro.html">Passageiro</a>
-            <a id="link-pages" href="registro-motorista.html" >Motorista</a>
-        </div>
-            
-    </main>
-
-    <section>
+    <section class="separar-coluna">
         <!-- lista de cadastrados -->
         <main id="content">
-            <!-- acesso para usuario -->
+            <h1>USUÁRIOS CADASTRADOS</h1>
+
+            <ul id="userList" class="users">
+                <!-- Passageiro aqui -->
+                
+            </ul>
+            <!-- Button -->
+            <div class="pagination">
+                <div class="">
+                    <button id="btnShowUsers" type="button" >
+                        Mostrar Usuários
+                    </button>
+                </div>
+            </div>
+
         </main>
     </section>
 
     <!-- js -->
-    <script src="assets/js/login-authentication.js"></script>
     <script src="assets/js/register-user.js"></script>
     <script src="assets/js/model-user.js"></script>
     <script src="assets/js/main.js"></script>

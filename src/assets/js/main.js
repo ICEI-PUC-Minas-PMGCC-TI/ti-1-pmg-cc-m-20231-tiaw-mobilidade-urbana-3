@@ -15,6 +15,9 @@ const db = () => {
             motorista : [
                 {nome: "Mauro Cezar", email: "mauro@static.com", cpf:"12345678909", telefone:"94999035131", 
                 cnhB:"1234567", placaVeiculo: "ABC1234", capacidadeVeiculo:"15" } 
+            ],
+            admin: [
+                {nome: "Thiago Cedro", email: "thiago@admin.com", senha: "123"}
             ]}
     }
     return objData
@@ -61,6 +64,5 @@ function convertUsersToHtml() {
     html.innerHTML = strHtml
 }
 
-document.getElementById('btnShowUsers').addEventListener('click', convertUsersToHtml)
-document.getElementById('btnIncluirPassageiro').addEventListener('click', inserir_passageiro)
-document.getElementById('btnIncluirMotorista').addEventListener('click', inserir_motorista)
+if(document.getElementById('btnIncluirPassageiro')) document.getElementById('btnIncluirPassageiro').addEventListener('click', inserir_passageiro)
+if (document.getElementById('btnIncluirMotorista')) document.getElementById('btnIncluirMotorista').addEventListener('click', inserir_motorista)

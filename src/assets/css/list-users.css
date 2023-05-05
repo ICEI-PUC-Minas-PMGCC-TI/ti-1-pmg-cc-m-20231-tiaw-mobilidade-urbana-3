@@ -5,15 +5,17 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    
 }
 
-.passageiro{ 
+.passageiro {
     background-color: #98d5d7; 
 }
 
-.motorista{ 
-    background-color: #678fee; 
+.motorista {
+    background-color: #98d5d7; 
 }
+
 
 
 @media screen and (min-width: 380px) {
@@ -30,6 +32,18 @@
 
 /* On screens that are 992px or less*/
 @media screen and (min-width: 992px) {
+    h1 {
+        display: inline;
+    }
+    .pagination button{
+        display: inline;
+    }
+
+    .content-main registro{
+        display: inline;
+        padding: .100rem;
+        margin-bottom: 0;
+    }
     .users {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }

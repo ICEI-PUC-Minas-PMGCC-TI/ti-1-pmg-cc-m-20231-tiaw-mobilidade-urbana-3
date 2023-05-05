@@ -25,7 +25,7 @@ function convertUsersToHtml() {
     let objData = db.call()
 
     for(i=0; i < objData.users.length; i++) {
-        strHtml += `<li class="user passageiro">
+        strHtml += `<li class="user motorista">
                         <div class="detail">
                             <ol class="types">
                                 <li class="type passageiro">passageiro</li> 

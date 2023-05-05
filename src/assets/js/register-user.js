@@ -1,39 +1,3 @@
-// const novo_passageiro  = document.getElementById('submit-passageiro')
-// const novo_motorista   = document.getElementById('submit-motorista') 
-
-// function cadastro_passageiro() {
-//    const passageiro = new Passageiro();
-
-//    passageiro.nome_completo = document.getElementById('cadastro-passageiro-nome').value;
-//    passageiro.cpf = document.getElementById('cadastro-passageiro-cpf').value;
-//    passageiro.numero_celular = document.getElementById('cadastro-passageiro-telefone').value;
-//    passageiro.email = document.getElementById('cadastro-passageiro-email').value;
-//    passageiro.senha = document.getElementById('cadastro-passageiro-senha').value;
-    
-//     localStorage.setItem('passageiro', JSON.stringify(passageiro))
-// }
-
-// function cadastro_mostorista() {
-//     const motorista = new Motorisa()
-    
-//     motorista.capacidade_transporte = document.getElementById('cadastro-motorista-capacidade')
-//     motorista.cnh = document.getElementById('cadastro-motorista-cnh')
-//     motorista.placa_veiculo = document.getElementById('cadastro-motorista-placa')
-
-
-//     motorista.nome_completo = document.getElementById('cadastro-motorista-nome')
-//     motorista.cpf = document.getElementById('cadastro-motorista-cpf')
-//     motorista.numero_celular = document.getElementById('cadastro-motorista-telefone')
-//     motorista.email = document.getElementById('cadastro-motorista-email')
-//     motorista.senha = document.getElementById('cadastro-motorista-senha')
-
-//     localStorage.setItem('motorista', JSON.stringify(motorista))
-// }
-
-// novo_passageiro.addEventListener('click', cadastro_passageiro)
-// // novo_motorista.addEventListener('click', cadastro_mostorista)
-
-
 function registrarPassageiro() {
     let passageiro = new Passageiro()
 

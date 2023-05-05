@@ -1,0 +1,139 @@
+            
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f8fc;
+}
+
+.separar-coluna {
+    column-width:  50%;
+}
+
+
+
+.content-main {
+    background-color: white;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+h1 {
+    justify-content: center;
+    align-self: center;
+    display: block;
+    padding: .525rem;
+    margin: .50rem;
+}   
+
+input {
+    padding: .25rem .5rem;
+    margin: .25rem ;
+    font-size: .625rem;
+    border-radius: 5rem;
+}
+
+
+
+.content{
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+    background-color: white;
+    
+}
+
+
+.usuarios {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #678fee;  
+}
+
+.user {
+    margin: .5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.user .cpf {
+    color: #000000;
+    opacity: .3;
+    text-align: right;
+    font-size: .625rem;
+}
+
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.pagination button{
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    
+}
+
+.user .name {
+    color: #0c0c0c;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.user .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.user .detail .types .type {
+    color: #000000;
+    padding: .25rem .5rem;
+    margin:  .25rem 0;
+    font-size: .625rem;
+    border-radius:  1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    list-style: none;
+
+}
+
+/* On screens that are 992px or less*/
+@media screen and (min-width: 992px) {
+    .content {
+        min-width: 922px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}

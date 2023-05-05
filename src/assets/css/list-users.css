@@ -1,0 +1,36 @@
+
+.users {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.passageiro{ 
+    background-color: #98d5d7; 
+}
+
+.motorista{ 
+    background-color: #678fee; 
+}
+
+
+@media screen and (min-width: 380px) {
+    .users{
+        grid-template-columns: 1fr 
+    }
+}
+/* On screens that are 576px or less*/
+@media screen and (min-width: 576px) {
+    .users {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* On screens that are 992px or less*/
+@media screen and (min-width: 992px) {
+    .users {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

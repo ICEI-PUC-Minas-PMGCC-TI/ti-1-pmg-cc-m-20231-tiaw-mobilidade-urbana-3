@@ -38,16 +38,13 @@
 
 /* On screens that are 992px or less*/
 @media screen and (min-width: 992px) {
-    h1 {
-        display: inline;
-    }
     
     .pagination{
         display: block
     }
 
     .content-main registro input{
-        display: inline-block;
+        display: flex;
     }
     
     .users {

@@ -167,4 +167,9 @@ input {
         font-size: 30px;
         justify-content: space-between;
     }
+
+    .pagination .pag-entrar {
+        display: flex;
+        justify-content: center;
+    }
 }

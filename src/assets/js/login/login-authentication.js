@@ -24,6 +24,7 @@ function verificar_login(login) {
     for (i = 0; i < objData.passageiros.length; i++) {
         if (login.email === objData.passageiros[i].email) {
             if(login.senha === objData.passageiros[i].senha) {
+                window.alert(`Seja bem vindo novamente ${objData.passageiros[i].nome}!`)
                 return true
             }
         }
@@ -32,6 +33,7 @@ function verificar_login(login) {
     for (i = 0; i < objData.motorista.length; i++) {
         if (login.email === objData.motorista[i].email) {
             if(login.senha === objData.motorista[i].senha) {
+                window.alert(`Seja bem vindo novamente ${objData.passageiros[i].nome}!`)
                 return true
             }
         }

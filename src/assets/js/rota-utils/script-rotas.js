@@ -1,5 +1,3 @@
-
-
 function mostrar_minhas_rotas() {
     let html = document.getElementById('userList')
     let strHtml = ''

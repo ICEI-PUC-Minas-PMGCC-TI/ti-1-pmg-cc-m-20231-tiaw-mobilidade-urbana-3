@@ -22,43 +22,45 @@ function verificar_login_passageiro(login) {
     objData = db.call()
 
     for (i = 0; i < objData.passageiros.length; i++) {
-        if (login.email === objData.passageiros[i].email) {
-            if(login.senha === objData.passageiros[i].senha) {
-                window.alert(`Seja bem vindo novamente ${objData.passageiros[i].nome}!`)
-                return true
-            }
+        console.log(objData.passageiros[i].nome)
+        if (login.email === objData.passageiros[i].email && login.senha === objData.passageiros[i].senha) {
+            window.alert(`Seja bem vindo novamente ${objData.passageiros[i].nome}!`)
+            return objData.passageiros[i]
         }
     }
+
+    return false
 }
 
 function verificar_login_motorista(login) {
-    for (i = 0; i < objData.motorista.length; i++) {
-        if (login.email === objData.motorista[i].email) {
-            if (login.senha === objData.motorista[i].senha) {
-                window.alert(`Seja bem vindo novamente ${objData.passageiros[i].nome}!`)
-                return true
-            }
-        }
-        else{ 
-            return false
-        }
-    }
+    for (x = 0; x < objData.motorista.length; x++) {
+        console.log(objData.motorista[x].nome)
+        if (login.email === objData.motorista[x].email && login.senha === objData.motorista[x].senha ) {
+                window.alert(`Seja bem vindo novamente ${objData.motorista[x].nome}!`)
+                return objData.motorista[x]
+            } 
+        } 
+
+    return false
 }
 
-const log = document.getElementById('btnEntrar').addEventListener('click', () => {
+document.getElementById('btnEntrar').addEventListener('click', () => {
     const login = {
         email: document.getElementById('input-email').value,
         senha: document.getElementById('input-senha').value
     } 
-    if ( verificar_login_passageiro(login) ) { 
-        liberar_acesso() 
-        let user = new PassageiroLogado(login)
-        localStorage.setItem('logged', JSON.stringify(user))
+
+    let usuarioRetornado = verificar_login_passageiro(login) || verificar_login_motorista(login)
+    
+    if ( usuarioRetornado.type === "passageiro" ) { 
+        liberar_acesso()        
+        let userLogged = new PassageiroLogado(usuarioRetornado)
+        localStorage.setItem('logged', JSON.stringify(userLogged))
         
-    } else if(verificar_login_motorista(login)) {
+    } else if(usuarioRetornado.type === "motorista" ) {
         liberar_acesso() 
-        let user = new MotoristaLogado(login)
-        localStorage.setItem('logged', JSON.stringify(user))
+        let userLogged = new MotoristaLogado(usuarioRetornado)
+        localStorage.setItem('logged', JSON.stringify(userLogged))
     
     }
     

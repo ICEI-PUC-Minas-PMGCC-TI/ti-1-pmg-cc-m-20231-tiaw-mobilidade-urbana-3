@@ -6,10 +6,10 @@ const db = () => {
         objData = JSON.parse(strData)
     } else { //static location example to show users info.
         objData = { passageiros : [
-            {nome: "Roger Guedes",   email: "Roger@static.com",  cpf:"12345678909", telefone: "94999035131"},
-            {nome: "Yuri Alberto",   email: "Yuri@static.com",   cpf:"12345678909", telefone: "94999035131"},
-            {nome: "Cassio Ramos",   email: "Cassio@static.com", cpf:"12345678909", telefone: "94999035131"},
-            {nome: "Renato Augusto", email: "Renato@static.com", cpf:"12345678909", telefone: "94999035131"}
+            {nome: "Roger Guedes",   email: "Roger@static.com",  cpf:"12345678909", telefone: "94999035131", type: 'passageiro'},
+            {nome: "Yuri Alberto",   email: "Yuri@static.com",   cpf:"12345678909", telefone: "94999035131", type: 'passageiro'},
+            {nome: "Cassio Ramos",   email: "Cassio@static.com", cpf:"12345678909", telefone: "94999035131", type: 'passageiro'},
+            {nome: "Renato Augusto", email: "Renato@static.com", cpf:"12345678909", telefone: "94999035131", type: 'passageiro'}
 
             ],
             motorista : [
@@ -28,7 +28,7 @@ function salvarDados (data) {
 } 
 
 function getUserLogged() {
-    let user = localStorage.getItem('logged')
+    let user = JSON.parse(localStorage.getItem('logged'))
     return user
 }
 

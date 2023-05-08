@@ -14,11 +14,11 @@ class Motorista extends Usuario
     placaVeiculo;
     capacidadeVeiculo;
     rotas = [];
-    type = 'motorista';
+    type = "motorista"
 }
 
 class Passageiro extends Usuario 
 {
     rotas = []
-    type = 'passageiro'
+    type = "passageiro"
 }

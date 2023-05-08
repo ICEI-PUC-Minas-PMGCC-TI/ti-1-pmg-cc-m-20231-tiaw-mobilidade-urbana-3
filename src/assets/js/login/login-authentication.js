@@ -18,7 +18,7 @@ function liberar_acesso() {
     convertUsersToHtml()
 }
 
-function verificar_login(login) {
+function verificar_login_passageiro(login) {
     objData = db.call()
 
     for (i = 0; i < objData.passageiros.length; i++) {
@@ -29,10 +29,12 @@ function verificar_login(login) {
             }
         }
     }
+}
 
+function verificar_login_motorista(login) {
     for (i = 0; i < objData.motorista.length; i++) {
         if (login.email === objData.motorista[i].email) {
-            if(login.senha === objData.motorista[i].senha) {
+            if (login.senha === objData.motorista[i].senha) {
                 window.alert(`Seja bem vindo novamente ${objData.passageiros[i].nome}!`)
                 return true
             }
@@ -48,8 +50,19 @@ const log = document.getElementById('btnEntrar').addEventListener('click', () =>
         email: document.getElementById('input-email').value,
         senha: document.getElementById('input-senha').value
     } 
-    if( verificar_login(login) ) liberar_acesso()
-    else { window.alert('Email ou senha inválido')}
+    if ( verificar_login_passageiro(login) ) { 
+        liberar_acesso() 
+        let user = new PassageiroLogado(login)
+        localStorage.setItem('logged', JSON.stringify(user))
+        
+    } else if(verificar_login_motorista(login)) {
+        liberar_acesso() 
+        let user = new MotoristaLogado(login)
+        localStorage.setItem('logged', JSON.stringify(user))
+    
+    }
+    
+    else { window.alert('Email ou senha inválido') }
 })
 
 if(document.getElementById('btnShowUsers')) document.getElementById('btnShowUsers').addEventListener('click', convertUsersToHtml)

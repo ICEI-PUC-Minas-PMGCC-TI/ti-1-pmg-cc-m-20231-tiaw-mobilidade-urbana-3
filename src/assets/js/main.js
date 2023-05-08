@@ -27,6 +27,11 @@ function salvarDados (data) {
     localStorage.setItem('db', JSON.stringify(data))
 } 
 
+function getUserLogged() {
+    let user = localStorage.getItem('logged')
+    return user
+}
+
 function convertUsersToHtml() {
     let html = document.getElementById('userList')
     let strHtml = ''

@@ -11,7 +11,7 @@ function mostrar_minhas_rotas() {
                                     <li class="type passageiro">passageiro</li> 
                                 </ol>
                             </div>
-                            <span class="name"><br>Origem: ${user.rotas[i].origem}</span>
+                            <span class="name"><br>Origem: ${user.rotas[i].origem} </span>
                             <span class="email">Destino: ${user.rotas[i].destino}</span>
                             <span class="telefone">Motorista: ${user.rotas[i].vagas}</span>
                             <span class="cpf">Horário: ${user.rotas[i].horario}</span>

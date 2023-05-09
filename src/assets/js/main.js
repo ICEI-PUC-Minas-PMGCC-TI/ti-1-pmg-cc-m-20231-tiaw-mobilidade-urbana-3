@@ -23,6 +23,21 @@ const db = () => {
     return objData
 }
 
+const hasLogged = () => {
+    let strData = localStorage.getItem('logged')
+    if(strData) return true
+    else  return false 
+}
+
+const typeUser = () => {
+    let strData = localStorage.getItem('logged')
+    if(strData) {
+        let objType = JSON.parse(strData).user.type        
+    }
+
+    return objType
+}
+
 function salvarDados (data) {
     localStorage.setItem('db', JSON.stringify(data))
 } 

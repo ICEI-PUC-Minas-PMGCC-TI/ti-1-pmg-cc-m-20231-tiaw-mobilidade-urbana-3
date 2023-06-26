@@ -1,0 +1,236 @@
+#carouselExample{
+    width: 100%;
+}
+.carrossel{
+    width: 100%;
+    padding-top: 10px;
+}
+#teste{
+    padding: 40px;
+    border-radius: 100px;
+}
+.newsletter{
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0, 0, 0.5);
+    height: 500%;
+    width: 100%;
+    z-index: 1;
+  }
+  .newsletterbackground{
+    width: 30%;
+    margin: 100px auto;
+    padding: 50px;
+    background-color:#fff ;
+    text-align: center;
+    border: 1px #fff;
+    border-radius: 10px;
+  }
+  .news h3{
+   color: #121297;
+  }
+  .form input{
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    
+  }
+  .form button{
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background-color: #121297;
+    color: #fff;
+    border: 1px;
+    border-radius: 5px;
+  }
+  .fechar{
+    padding-top: 10px;
+    color: gray;
+  }
+  .emaildigitar{
+    padding: 10px;
+    color: gray;
+  }
+  
+  .form button:hover{
+    background-color: #121297;
+    color: lightgray;
+  }
+  .sucess{
+    padding-top: 5px;
+    color: green;
+    display: none;
+  }
+  .erro{
+    padding-top: 5px;
+    color: crimson;
+    display: none;
+  }
+  .redirecionar{
+    display: none;
+    padding-top: 10px;
+    color: gray;
+  }
+  @media screen and (max-width: 828px) {
+    .newsletterbackground {
+      width: 80%;
+    }
+  
+    .form input {
+      width: 100%;
+    }
+  }
+  .tituloprocura{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 50px ;
+    text-align: center;
+    margin-bottom: 45px;
+    color: #333;
+  }
+  .busca{
+    width: 100%;
+    border-radius: 50px;
+  }
+  #searchInput{
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 100px;
+    text-align: center;
+    border-radius: 50px;
+    width: 80%;
+    margin-bottom: 15px;
+  }
+  #searchButton{
+    height: 35px;
+    width: 150px;
+    border-radius: 50px;
+    margin-left: 40px;
+  }
+  #searchResultsTittle{
+    margin-left: -4;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+  }
+  .detalhes{
+    width: 100%;
+  }
+  .imagemdetalhes{
+    display: flex;
+    float: left;
+    width: 30%;
+  }
+  .descricao{
+    width: 70%;
+    float: right;
+  }
+  .titulodetalhes{
+    margin-top: 50px;
+  }
+  .obss{
+    text-align: center;
+    color: gray;
+  }
+  @media screen and (max-width: 600px) {
+    .carrossel{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1473px) {
+    #searchInput{   
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 80%;
+        text-align: center;
+    }
+    .busca{
+        width: 100%;
+    }
+    #searchButton{
+        width: 30%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+.rotas{
+  width: 100%;
+}
+#searchbar{
+  color: #121297;
+  display: block;
+  margin-top: 20px;
+  border: 1px solid;
+  border-radius: 100px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  height: 60px;
+}
+.option{
+  margin-top: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: gray;
+  font-size: 15px;
+  text-align: center;
+}
+.bgrotas{
+  text-align: center;
+}
+#ulrotas{
+  list-style: none;
+  text-decoration: none; 
+}
+#ulrotas > li{
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  list-style-type: none;
+}
+.rota{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #121297;
+  text-decoration: none; 
+}
+.butaorota{
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #121297;
+  cursor: pointer;
+  color: #121297;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-decoration: none;
+}
+.butaorota:hover{
+  background-color: #121297;
+  color: #fff;
+}
+#butaodecoration{
+  text-decoration: none;
+}
+.termo{
+  margin-top: 50px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.termos{
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}

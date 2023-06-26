@@ -1,0 +1,48 @@
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: calc(50% - 10px);
+  }
+  
+  .person img {
+    width: 300px;
+    height: 300px;
+    border-radius: 35%;
+    margin-right: 10px;
+  }
+  
+  .person .name {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .margin{
+    margin-bottom: 100px;
+  }
+  @media screen and (max-width: 600px) {
+    .team{
+        max-width: 600px;
+    }
+    .person img {
+        width: 100px;
+        height: 100px;
+        border-radius: 35%;
+        margin-left: 10px;
+      }
+      .person .name {
+        font-weight: bold;
+        font-size: 16px;
+      }
+    .person {
+      width: 100%;
+    }
+  }
+  

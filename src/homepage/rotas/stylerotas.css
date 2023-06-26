@@ -1,0 +1,64 @@
+#foto{
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-left: 200px;
+}
+.imagem{
+    display: flex;
+    width: 50%;
+    float: left;
+}
+#h2info{
+    margin-top: 60px;
+    margin-left: 20px;
+    text-align: center;
+}
+#h3info{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+#pinfo{
+    margin-top: 40px;
+    text-align: center;
+}
+#btninfo{
+    width: 100%;
+   text-align: center;
+}
+#infolocal{
+    text-align: center;
+    margin-right: 50px;
+}
+#enderecolocal{
+    text-align: center;
+}
+footer{
+    margin-top: 200px;
+}
+@media screen and (max-width: 1222px) {
+    #infolocal{
+        margin-right: 0;
+    }
+    #h2info{
+        margin-left: 0;
+        margin-top: 80px;
+    }
+    #h3info{
+        margin-bottom: 60px;
+    }
+    #foto{
+        width: 300px;
+        height: 300px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        margin-left: 0;
+    }
+    .imagem{
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+}

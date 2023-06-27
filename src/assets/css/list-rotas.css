@@ -1,0 +1,106 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f6f8fc;
+}
+
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+button {
+
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .900rem;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    display: flex
+}
+
+#ol-routes {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px;
+    padding: .100rem;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+}
+
+#li-routes{
+    margin: 20px;
+    outline: .3px solid rgb(49, 49, 49);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #f6f8fc;;
+    text-align: center;
+
+}
+
+#ol-routes a{
+    display: block;
+    margin-bottom: 10px;
+    padding: .100rem;
+    margin-left: 2px;
+}
+
+button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1); /* Efeito de sombra ao clicar */
+}
+
+#ol-routes #btns {
+    display: inline-block;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.container-myRoutes{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px;
+    padding: .100rem;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+}
+
+.container-myRoutes #content-myroutes {
+    margin: 20px;
+    outline: .3px solid rgb(49, 49, 49);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #f6f8fc;;
+    text-align: center;
+}
+
+#ol-myroutes {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px;
+    padding: .100rem;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+}

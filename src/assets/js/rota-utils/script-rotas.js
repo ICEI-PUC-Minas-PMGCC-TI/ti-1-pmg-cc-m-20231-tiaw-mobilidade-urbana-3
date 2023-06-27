@@ -1,14 +1,13 @@
 function mostrar_minhas_rotas() {
     let html = document.getElementById('userList')
     let strHtml = ''
-    let user = getUserLogged()
-
+    const user =  getUserLogged.call()
     if (user.type === "motorista") {
-        for(i=0; i < user.rotas.length; i++) {
-            strHtml += `<li class="user passageiro">
+        for(i=0; i < getUserLogged().rotas.length; i++) {
+            strHtml += `<li class="user motorista">
                             <div class="detail">
                                 <ol class="types">
-                                    <li class="type passageiro">passageiro</li> 
+                                    <li class="type motorista">suas rotas:</li> 
                                 </ol>
                             </div>
                             <span class="name"><br>Origem: ${user.rotas[i].origem} </span>
@@ -34,12 +33,14 @@ function mostrar_minhas_rotas() {
 }
 
 const m_nova_rota = () => {
-    let rota = new Rota() 
+    const rota = new Rota() 
 
-    rota.origem = document.getElementById('reg-rota').value
+    rota.origem  = document.getElementById('reg-origem').value
     rota.destino = document.getElementById('reg-destino').value
     rota.horario = document.getElementById('reg-horario').value
-    rota.vagas = document.getElementById('reg-vagas').value
+    rota.vagas   = document.getElementById('reg-capacidade').value
+
+    console.log(rota.origem)
 
     return rota
 }
@@ -50,20 +51,35 @@ const p_entrar_rota = (user) => {
     }
 }
 
+function loadMyRoutes() {
+    let html = document.getElementById('ol-myroutes')
+    let strHtml = ''
 
+    let routes = [] = userLogged.rotas.rotasCadastradas
+    for(i=0; i < userLogged.rotas.rotasCadastradas.length; i++) {
+        strHtml += `<li id="li-routes">
+                        <a id="origem-value">Origem:
+                            <p>${userLogged.rotas.rotasCadastradas[i].origem}</p>
+                        </a>
+                        <a id="destino-value">Destino:
+                            <p>${userLogged.rotas.rotasCadastradas[i].destino}</p>
+                        </a>
+                        <a id="horario-value">Horario: 
+                            <p>${userLogged.rotas.rotasCadastradas[i].horario}</p>
+                        </a>
+                    </li>`
+    }
+    
+    html.innerHTML = strHtml
+}
 
 btnCadastrarRota.addEventListener('click' , (status_profile_motorista) => {
-    if(status_profile_motorista) var rota = cadastrar_rota()
+    if(status_profile_motorista) { 
+        let user = getUserLogged.call()
+        user.rotas[user.rotas.length] = m_nova_rota.call() //= m_nova_rota.call()
+        localStorage.setItem('logged', JSON.stringify(user))
+    }
     else { console.log("ERROR:error ao verificar status") }
-
-    return rota
 })
 
-btnEntrarRota.addEventListener('click', (status_profile_passageiro) => {
-    if(status_profile_passageiro) getUserLogged.rotas.push(rota)
-    else { console.log("error ao dar push nao rota") }
-})
-
-const rota = document.getElementById('rotas-cadastradas').value
-if( document.getElementById('entrar-rota'))    btnEntrarRota    = document.getElementById('entrar-rota')
 if( document.getElementById('cadastrar-rota')) btnCadastrarRota = document.getElementById('cadastrar-rota')

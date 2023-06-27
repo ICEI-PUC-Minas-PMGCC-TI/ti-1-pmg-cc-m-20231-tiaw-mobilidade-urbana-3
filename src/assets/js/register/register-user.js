@@ -6,7 +6,6 @@ const novo_passageiro = () => {
     passageiro.senha    = document.getElementById('reg-pass').value
     passageiro.telefone = document.getElementById('reg-tel').value
     passageiro.cpf      = document.getElementById('reg-cpf').value
-
     window.alert('Usuário foi criado com sucesso!')
 
     return passageiro
@@ -30,11 +29,9 @@ const novo_motorista = () => {
 }
 
 function inserir_passageiro() {
-    let objData = db.call()
-
+    let objData = JSON.parse(localStorage.getItem("userCadastrados"))
     let pass = novo_passageiro.call();
-    objData.passageiros.push(pass)
-
+    objData.push(pass)
     salvarDados(objData)
 }
 

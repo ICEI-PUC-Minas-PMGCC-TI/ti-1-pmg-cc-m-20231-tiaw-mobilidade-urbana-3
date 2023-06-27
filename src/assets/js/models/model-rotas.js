@@ -4,6 +4,6 @@ class Rota
     destino;
     motorista;
     vagas;
-    passageiros = []
+    passageirosId = []
     horario;
 }

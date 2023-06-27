@@ -1,5 +1,7 @@
+let id = 0;
 class Usuario
 {
+    id
     nome;
     cpf;
     email;
@@ -13,12 +15,14 @@ class Motorista extends Usuario
     cnhB;
     placaVeiculo;
     capacidadeVeiculo;
-    rotas = [];
     type = "motorista"
+    rotasCadastradas = []
+    id = id++
 }
 
 class Passageiro extends Usuario 
 {
-    rotas = []
+    minhasRotas = []
     type = "passageiro"
+    id = id++
 }

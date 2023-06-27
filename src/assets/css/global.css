@@ -149,8 +149,45 @@ input {
 
 }
 
+.content-cadastro-rota {
+    display: grid;
+    padding: 5rem;
+    
+}
+
+
+
+.content-cadastro-rota #form-cadastro-rota{
+    background-color: white;
+    border-radius: 10px;
+    outline: 0.5px solid black;
+}
+
+.content-cadastro-rota #form-cadastro-rota #btnRegistrarRota{
+    display: flex;
+    justify-content: center;
+}
+
+#form-cadastro-rota a {
+    padding-left: 25%;
+    display: block;
+}
+
+#form-cadastro-rota button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .900rem;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    display: flex;
+            
+}
+
 /* On screens that are 992px or less*/
 @media screen and (min-width: 992px) {
+
     .content {
         min-width: 922px;
         height: auto;
@@ -173,3 +210,7 @@ input {
         justify-content: center;
     }
 }
+
+@media (min-width: 768px) { 
+
+ }

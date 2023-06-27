@@ -10,6 +10,10 @@ class PassageiroLogado
         } 
     }
 
+    entrar_nova_rota(p_entrar_rota) {
+        this.user.rotas.push(p_nova_rota)
+
+    }
 }
 
 class MotoristaLogado 

@@ -1,45 +1,12 @@
-function liberar_acesso() {
-    let html = document.getElementById('content')
-    let strHtml = ''
+function verficarLogin(login) {
+    objData = JSON.parse(localStorage.getItem('userCadastrados'))
 
-    strHtml = `<h1>USUÁRIOS CADASTRADOS</h1>
-                <ul id="userList" class="users">
-                    <!-- Passageiro aqui -->
-                </ul>
-                <!-- Button -->
-                <div class="pagination">
-                    <div class="">
-                        <button id="btnShowUsers" type="button" >
-                            Mostrar Usuários
-                        </button>
-                    </div>
-                </div>`
-    html.innerHTML += strHtml
-    convertUsersToHtml()
-}
-
-function verificar_login_passageiro(login) {
-    objData = db.call()
-
-    for (i = 0; i < objData.passageiros.length; i++) {
-        console.log(objData.passageiros[i].nome)
-        if (login.email === objData.passageiros[i].email && login.senha === objData.passageiros[i].senha) {
-            window.alert(`Seja bem vindo novamente ${objData.passageiros[i].nome}!`)
-            return objData.passageiros[i]
+    for (i = 0; i < objData.length; i++) {
+        if (login.email === objData[i].email && login.senha === objData[i].senha) {
+            window.alert(`Seja bem vindo novamente ${objData[i].nome}!`)
+            return objData[i]
         }
     }
-
-    return false
-}
-
-function verificar_login_motorista(login) {
-    for (x = 0; x < objData.motorista.length; x++) {
-        console.log(objData.motorista[x].nome)
-        if (login.email === objData.motorista[x].email && login.senha === objData.motorista[x].senha ) {
-                window.alert(`Seja bem vindo novamente ${objData.motorista[x].nome}!`)
-                return objData.motorista[x]
-            } 
-        } 
 
     return false
 }
@@ -50,7 +17,7 @@ document.getElementById('btnEntrar').addEventListener('click', () => {
         senha: document.getElementById('input-senha').value
     } 
 
-    let usuarioRetornado = verificar_login_passageiro(login) || verificar_login_motorista(login)
+    let usuarioRetornado = verficarLogin(login)
     
     if ( usuarioRetornado.type === "passageiro" ) { 
         liberar_acesso()        

@@ -1,8 +1,5 @@
 class PassageiroLogado 
 {
-    user;
-    status;
-    
     constructor(user) {
         if(user.type === 'passageiro') {
             this.user = user
@@ -18,9 +15,6 @@ class PassageiroLogado
 
 class MotoristaLogado 
 {
-    user;
-    status;
-
     constructor(user) {
         if(user.type === 'motorista') {
             this.user = user

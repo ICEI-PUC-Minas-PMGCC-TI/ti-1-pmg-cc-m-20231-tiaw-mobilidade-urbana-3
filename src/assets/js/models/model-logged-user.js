@@ -1,28 +1,26 @@
-class PassageiroLogado 
-{
-    constructor(user) {
-        if(user.type === 'passageiro') {
-            this.user = user
-            this.status = true
-        } 
+function setPassageiroLogged(usuarioRetornado) {
+    let UserPassageiro = {
+        id: usuarioRetornado.id,
+        email:  usuarioRetornado.email,
+        userName:  usuarioRetornado.nome,
+        rotasCadastradas : {
+            rotas:[usuarioRetornado.rotasCadastradas]
+        }
     }
-
-    entrar_nova_rota(p_entrar_rota) {
-        this.user.rotas.push(p_nova_rota)
-
-    }
+    return UserPassageiro
 }
 
-class MotoristaLogado 
-{
-    constructor(user) {
-        if(user.type === 'motorista') {
-            this.user = user
-            this.status = true;
-        } 
+function setMotoristaLogged(usuarioRetornado) {
+    let UserMotorista = {
+        userId:     usuarioRetornado.id,
+        userName:   usuarioRetornado.nome,
+        email:      usuarioRetornado.email,
+        cnh:        usuarioRetornado.cnh,
+        cpf:        usuarioRetornado.cpf,
+        rotasCadastradas : {
+            rotas: usuarioRetornado.rotasCadastradas
+        }
+        
     }
-
-    cadastrar_nova_rota(m_nova_rota) {
-        this.user.rotas.push(nova_rota)
-    }
+    return UserMotorista
 }

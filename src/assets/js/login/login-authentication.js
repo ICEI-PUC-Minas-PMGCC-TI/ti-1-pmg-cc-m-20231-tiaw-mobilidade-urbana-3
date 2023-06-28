@@ -1,4 +1,4 @@
-function verficarLogin( login ) {
+function authLogin( login ) {
     objData = JSON.parse(localStorage.getItem('userCadastrados'))
 
     for (i = 0; i < objData.length; i++) {
@@ -20,21 +20,24 @@ document.getElementById('btnEntrar').addEventListener('click', () => {
         senha: document.getElementById('input-senha').value
     } 
 
-    let usuarioRetornado = verficarLogin(login)
-    if ( usuarioRetornado.type === "passageiro" ) { 
-        let userLogged = new PassageiroLogado(usuarioRetornado)
-        localStorage.setItem('logged', JSON.stringify(userLogged))
-        setTimeout(3000, () => {
-            window.location.href="./Lista_De_Rotas.html"
-        })
-    } else if (usuarioRetornado.type === "motorista" ) {
-        let userLogged = new MotoristaLogado(usuarioRetornado)
-        localStorage.setItem('logged', JSON.stringify(userLogged))
-        setTimeout(3000, () => {
-            window.location.href="./Lista_De_Rotas.html"
-        })
-    
-    }
-    
-    else { window.alert('Email ou senha inválido') }
+    let usuarioRetornado = authLogin(login)
+    if(usuarioRetornado != false)
+        if ( usuarioRetornado.type === "passageiro" ) { 
+            console.log("cheguei aq")
+            let user = setPassageiroLogged(usuarioRetornado)
+            console.log(user.userName)
+            localStorage.setItem('logged', JSON.stringify(user))
+            setTimeout(() => {
+                window.location.href="Lista_De_Rotas.html"
+            }, 3000)
+        
+        } else if (usuarioRetornado.type === "motorista" ) {
+            
+            localStorage.setItem('logged', JSON.stringify(setMotoristaLogged(usuarioRetornado)))
+            setTimeout(() => {
+                window.location.href="Lista_De_Rotas.html"
+            }, 3000)
+        }
+        
+        else { window.alert('Email ou senha inválido') }
 })

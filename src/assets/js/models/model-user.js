@@ -16,13 +16,13 @@ class Motorista extends Usuario
     placaVeiculo;
     capacidadeVeiculo;
     type = "motorista"
-    rotasCadastradas = {rotas:[]}
+    rotasCadastradas = []
     id = id++
 }
 
 class Passageiro extends Usuario 
 {
-    rotasCadastradas = {rotas:[]}
+    rotasCadastradas = []
     type = "passageiro"
     id = id++
 }

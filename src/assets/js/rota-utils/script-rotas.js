@@ -1,4 +1,8 @@
 const objRotas = JSON.parse(localStorage.getItem("rotasCadastradas"))
+const updateDb = (uptUser) => localStorage.setItem('userLogged', JSON.stringify(uptUser))
+
+
+
 
 function paggination() {
     let html = document.getElementById('ol-routes')

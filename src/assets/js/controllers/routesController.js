@@ -1,3 +1,5 @@
+const user = getUserLogged()
+
 function enterRoute(selectedList) {
     var paragrafos = selectedList.querySelectorAll("p");
     const objRota = {
@@ -9,7 +11,7 @@ function enterRoute(selectedList) {
     } 
 
     user.rotasCadastradas.rotas.push(objRota.rota)
-    updateDb(userLogged)
+    updateDb(user)
 } 
 
 function showMoreInfos( btn_show_more ) {
@@ -32,15 +34,13 @@ function showMoreInfos( btn_show_more ) {
 
 function hideMoreInfos( btn_show_more ) {
     let strHtml = ''
-    btn_show_more.
-    selectedList.innerHTML = strHtml
+    btn_show_more.selectedList.innerHTML = strHtml
 }
 
 
 function loadMyRoutes() {
     let html = document.getElementById('ol-myroutes')
     let strHtml = ''
-    let user = getUserLogged()
     let routes = [] = user.rotasCadastradas.rotas
     
     if(user.rotasCadastradas.rotas[0] != null) {

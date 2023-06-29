@@ -1,5 +1,5 @@
 const objRotas = JSON.parse(localStorage.getItem("rotasCadastradas"))
-const updateDb = (uptUser) => localStorage.setItem('userLogged', JSON.stringify(uptUser))
+const updateDb = (uptUser) => localStorage.setItem('logged', JSON.stringify(uptUser))
 const numOfRoutes = objRotas.length
 
 function paggination() {

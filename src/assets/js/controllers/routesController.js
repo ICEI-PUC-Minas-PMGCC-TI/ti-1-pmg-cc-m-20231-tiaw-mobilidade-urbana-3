@@ -22,19 +22,25 @@ function showMoreInfos( btn_show_more ) {
     var mot = objMot.motoristas[0]
     
     strHtml += `
-    <a id="horario-value">Telefone do Motorista. Entre em contanto: 
-        <p>${mot.telefone}</p>
-    </a>
+    <div id="divShowMore">
+        <a id="horario-value">Telefone do Motorista. Entre em contanto: 
+            <p>${mot.telefone}</p>
+        </a>
 
-    <button id="btn-mostrar-menos" type="button">Mostrar Menos</button>
+        <button id="btn-mostrar-menos" type="button">Mostrar Menos</button>
+    </div>
     `
 
     selectedList.innerHTML = strHtml
+    let btn = document.getElementById('btn-mostrar-menos').addEventListener('click', () =>{
+        hideMoreInfos( btn_show_more )
+    })
+    
 }
 
 function hideMoreInfos( btn_show_more ) {
     let strHtml = ''
-    btn_show_more.selectedList.innerHTML = strHtml
+    document.getElementById('divShowMore').append()
 }
 
 

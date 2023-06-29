@@ -64,31 +64,3 @@ function loadMyRoutes() {
     }
     
 }
-
-if(document.getElementById('btn-mostrar-menos')) { 
-    document.getElementById('btn-mostrar-menos').addEventListener('click', (e) => {
-        hideMoreInfos(document.getElementById('btn-mostrar-menos'))
-    })
-}
-
-// btn_mostrarmais0.addEventListener('click', (e) => {
-//     showMoreInfos(btn_mostrarmais0)
-// }) 
-// btn_mostrarmais1.addEventListener('click', (e) => {
-//     showMoreInfos(btn_mostrarmais1)
-// }) 
-// btn_mostrarmais2.addEventListener('click', (e) => {
-//     showMoreInfos(btn_mostrarmais2)
-// }) 
-// btn_mostrarmais3.addEventListener('click', (e) => {
-//     showMoreInfos(btn_mostrarmais3)
-// }) 
-// btn_mostrarmais4.addEventListener('click', (e) => {
-//     showMoreInfos(btn_mostrarmais4)
-// }) 
-
-// btn0.addEventListener('click', () => enterRoute(btn0.parentNode.parentNode))
-// btn1.addEventListener('click', () => enterRoute(btn1.parentNode.parentNode))
-// btn2.addEventListener('click', () => enterRoute(btn2.parentNode.parentNode))
-// btn3.addEventListener('click', () => enterRoute(btn3.parentNode.parentNode))
-// btn4.addEventListener('click', () => enterRoute(btn3.parentNode.parentNode))

@@ -38,7 +38,7 @@ function setUser(usuarioRetornado) {
             redirecionarListaDeRotas()
         }
         
-        else { window.alert('Email ou senha inválido') }
+        else { alert('Email ou senha inválido') }
 }
 
 document.getElementById('btnEntrar').addEventListener('click', () => {

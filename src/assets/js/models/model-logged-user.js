@@ -18,7 +18,7 @@ function setMotoristaLogged(usuarioRetornado) {
         cnh:        usuarioRetornado.cnh,
         cpf:        usuarioRetornado.cpf,
         rotasCadastradas : {
-            rotas: usuarioRetornado.rotasCadastradas
+            rotas:[usuarioRetornado.rotasCadastradas]
         }
         
     }

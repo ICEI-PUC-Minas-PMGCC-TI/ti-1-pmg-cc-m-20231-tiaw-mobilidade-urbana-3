@@ -3,7 +3,6 @@ function authLogin( login ) {
 
     for (i = 0; i < objData.length; i++) {
         if (login.email === objData[i].email && login.senha === objData[i].senha) {
-            window.alert(`Seja bem vindo novamente ${objData[i].nome}!`)
             return objData[i]
 
         }
@@ -12,32 +11,38 @@ function authLogin( login ) {
     return false
 }
 
+function redirecionarListaDeRotas() {
+    setTimeout(()=>{
+        window.location.href = "Lista_De_Rotas.html"
+    }, 0)
+}
 
-
-document.getElementById('btnEntrar').addEventListener('click', () => {
-    const login = {
+function getLoginUser() {
+    let login = {
         email: document.getElementById('input-email').value,
         senha: document.getElementById('input-senha').value
     } 
+    return login
+}
 
-    let usuarioRetornado = authLogin(login)
-    if(usuarioRetornado != false)
+function setUser(usuarioRetornado) {
+ if(usuarioRetornado != false)
         if ( usuarioRetornado.type === "passageiro" ) { 
-            console.log("cheguei aq")
             let user = setPassageiroLogged(usuarioRetornado)
-            console.log(user.userName)
             localStorage.setItem('logged', JSON.stringify(user))
-            setTimeout(() => {
-                window.location.href="Lista_De_Rotas.html"
-            }, 3000)
+            redirecionarListaDeRotas()
         
         } else if (usuarioRetornado.type === "motorista" ) {
-            
-            localStorage.setItem('logged', JSON.stringify(setMotoristaLogged(usuarioRetornado)))
-            setTimeout(() => {
-                window.location.href="Lista_De_Rotas.html"
-            }, 3000)
+            let user = setMotoristaLogged(usuarioRetornado)
+            localStorage.setItem('logged', JSON.stringify(user))
+            redirecionarListaDeRotas()
         }
         
         else { window.alert('Email ou senha inválido') }
+}
+
+document.getElementById('btnEntrar').addEventListener('click', () => {
+    const login = getLoginUser()
+    let usuarioRetornado = authLogin(login)
+    setUser(usuarioRetornado)
 })

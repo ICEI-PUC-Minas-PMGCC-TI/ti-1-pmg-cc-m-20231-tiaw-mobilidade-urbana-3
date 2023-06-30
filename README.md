@@ -18,4 +18,4 @@ O grupo decidiu montar um software para fazer a ligação de passageiros e motor
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+* Acesse ao link para visualizar o software: https://icei-puc-minas-pmgcc-ti.github.io/ti-1-pmg-cc-m-20231-tiaw-mobilidade-urbana-3/

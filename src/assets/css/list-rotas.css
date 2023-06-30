@@ -102,5 +102,4 @@ button:active {
     padding: .100rem;
     list-style-type: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex: 1;
 }

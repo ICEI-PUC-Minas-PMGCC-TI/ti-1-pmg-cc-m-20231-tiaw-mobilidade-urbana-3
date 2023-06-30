@@ -109,9 +109,14 @@ const objMotorista = {
     ]
 }
 
+
 function loadDb() {
-    localStorage.setItem('userCadastrados', JSON.stringify(db.users))
-    localStorage.setItem('rotasCadastradas', JSON.stringify(objRotas.rotas))
-    localStorage.setItem('motoristas', JSON.stringify(objMotorista))
-    sessionStorage.setItem('statusLoadDb', true)
+    let cond = sessionStorage.getItem("statusLoadDb");
+    if(!cond) {
+        localStorage.setItem('userCadastrados', JSON.stringify(db.users))
+        localStorage.setItem('rotasCadastradas', JSON.stringify(objRotas.rotas))
+        localStorage.setItem('motoristas', JSON.stringify(objMotorista))
+        sessionStorage.setItem('statusLoadDb', true) 
+    }
+
 }

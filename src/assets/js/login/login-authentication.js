@@ -33,7 +33,7 @@ function getLoginUser() {
 }
 
 function setUser(usuarioRetornado) {
- if(usuarioRetornado != false)
+    if(usuarioRetornado != false) { 
         if ( usuarioRetornado.type === "passageiro" ) { 
             let user = setPassageiroLogged(usuarioRetornado)
             localStorage.setItem('logged', JSON.stringify(user))
@@ -45,7 +45,7 @@ function setUser(usuarioRetornado) {
             redirecionarTelaMotorista()
         }
         
-        else { alert('Email ou senha inválido') }
+    } else { alert('Email ou senha inválido') }
 }
 
 function controlUser() {

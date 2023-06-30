@@ -17,6 +17,12 @@ function redirecionarListaDeRotas() {
     }, 0)
 }
 
+function redirecionarTelaMotorista() {
+    setTimeout(()=>{
+        window.location.href = "HomeMotorista.html"
+    }, 0)
+}
+
 function getLoginUser() {
     let login = {
         email: document.getElementById('input-email').value,
@@ -35,7 +41,7 @@ function setUser(usuarioRetornado) {
         } else if (usuarioRetornado.type === "motorista" ) {
             let user = setMotoristaLogged(usuarioRetornado)
             localStorage.setItem('logged', JSON.stringify(user))
-            redirecionarListaDeRotas()
+            redirecionarTelaMotorista()
         }
         
         else { alert('Email ou senha inválido') }

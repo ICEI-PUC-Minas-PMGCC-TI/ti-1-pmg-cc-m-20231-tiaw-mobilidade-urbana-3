@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Passageiros</title>
+
+    <!-- css normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Api fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <h1>Passageiros Cadastrados</h1>
+    <ul id="passageiros"></ul>
+
+    <h2>Adicionar Passageiro</h2>
+   
+	<form id="form-passageiro">
+      <label for="input-nome">Nome:</label>
+      <input type="text" id="input-nome" required>
+      <br>
+      <label for="input-telefone">Telefone:</label>
+      <input type="text" id="input-telefone" required>
+      <br>
+      <label for="input-partida">Partida:</label>
+      <input type="text" id="input-partida" required>
+      <br>
+      <label for="input-destino">Destino:</label>
+      <input type="text" id="input-destino" required>
+      <br>
+      <label for="input-datahora">Data e Hora:</label>
+      <input type="datetime-local" id="input-datahora" required>
+      <br>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Editar Passageiro</h2>
+  
+	<form id="form-editar">
+      <label for="input-id-editar">ID do Passageiro:</label>
+      <input type="number" id="input-id-editar" required>
+      <br>
+      <label for="input-nome-editar">Nome:</label>
+      <input type="text" id="input-nome-editar" required>
+      <br>
+      <label for="input-telefone-editar">Telefone:</label>
+      <input type="text" id="input-telefone-editar" required>
+      <br>
+      <label for="input-partida-editar">Partida:</label>
+      <input type="text" id="input-partida-editar" required>
+      <br>
+      <label for="input-destino-editar">Destino:</label>
+      <input type="text" id="input-destino-editar" required>
+      <br>
+      <label for="input-datahora-editar">Data e Hora:</label>
+      <input type="datetime-local" id="input-datahora-editar" required>
+      <br>
+      <button type="submit">Editar</button>
+    </form>
+
+    <h2>Remover Passageiro</h2>
+    
+	<form id="form-remover">
+      <label for="input-id-remover">ID do Passageiro:</label>
+      <input type="number" id="input-id-remover" required>
+      <br>
+      <button type="submit">Remover</button>
+    </form>
+		
+		<script src="assets/js/rota-utils/crudMotorista.js"></script>
+  </body>
+</html>

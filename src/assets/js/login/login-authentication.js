@@ -9,7 +9,7 @@ function authLogin( login ) {
         }
     }
 
-    return false
+    alert('Você não possui uma conta neste site.')
 }
 
 function redirecionarListaDeRotas() {
@@ -45,7 +45,7 @@ function setUser(usuarioRetornado) {
             redirecionarTelaMotorista()
         }
         
-    } else { alert('Email ou senha inválido') }
+    } 
 }
 
 function controlUser() {

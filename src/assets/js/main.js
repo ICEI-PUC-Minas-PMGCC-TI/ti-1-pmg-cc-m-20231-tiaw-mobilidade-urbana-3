@@ -25,6 +25,5 @@ function getUserLogged() {
     return user
 }
 
-loadDb()
 if(document.getElementById('btnIncluirPassageiro')) document.getElementById('btnIncluirPassageiro').addEventListener('click', inserir_passageiro)
 if(document.getElementById('btnIncluirMotorista'))  document.getElementById('btnIncluirMotorista').addEventListener('click', inserir_motorista)

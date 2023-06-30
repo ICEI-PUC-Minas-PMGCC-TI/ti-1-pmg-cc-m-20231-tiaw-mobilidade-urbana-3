@@ -9,7 +9,7 @@ function enterRoute(selectedList) {
             horario:  paragrafos[2].textContent
         }
     } 
-
+    alert('Rota adicionada, espera o Motorista confirmar sua vaga.\nFique de olho em seu E-mail')
     user.rotasCadastradas.rotas.push(objRota.rota)
     updateDb(user)
 } 
@@ -32,7 +32,7 @@ function showMoreInfos( btn_show_more ) {
     `
 
     selectedList.innerHTML = strHtml
-    let btn = document.getElementById('btn-mostrar-menos').addEventListener('click', () =>{
+    document.getElementById('btn-mostrar-menos').addEventListener('click', () =>{
         hideMoreInfos( btn_show_more )
     })
     
@@ -40,7 +40,7 @@ function showMoreInfos( btn_show_more ) {
 
 function hideMoreInfos( btn_show_more ) {
     let strHtml = ''
-    document.getElementById('divShowMore').append()
+    document.getElementById('divShowMore').remove()
 }
 
 

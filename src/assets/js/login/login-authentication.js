@@ -1,3 +1,4 @@
+const btnEntrar = document.getElementById('btnEntrar')
 function authLogin( login ) {
     objData = JSON.parse(localStorage.getItem('userCadastrados'))
 
@@ -47,8 +48,10 @@ function setUser(usuarioRetornado) {
         else { alert('Email ou senha inválido') }
 }
 
-document.getElementById('btnEntrar').addEventListener('click', () => {
+function controlUser() {
     const login = getLoginUser()
     let usuarioRetornado = authLogin(login)
     setUser(usuarioRetornado)
-})
+
+}
+btnEntrar.addEventListener('click', (e) => {controlUser()})

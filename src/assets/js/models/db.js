@@ -111,13 +111,13 @@ const objMotorista = {
 
 
 function loadDb() {
-    let cond = sessionStorage.getItem("statusLoadDb");
-    if(!cond) {
+    let cond = localStorage.getItem('userCadastrados')
+    if(!cond){
         localStorage.setItem('userCadastrados', JSON.stringify(db.users))
         localStorage.setItem('rotasCadastradas', JSON.stringify(objRotas.rotas))
         localStorage.setItem('motoristas', JSON.stringify(objMotorista))
         sessionStorage.setItem('statusLoadDb', true) 
     }
-
 }
+
 loadDb()

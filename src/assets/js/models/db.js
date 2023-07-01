@@ -110,7 +110,7 @@ const objMotorista = {
 
 function updateDB(user) {
     let objusers = JSON.parse(localStorage.getItem('userCadastrados'))
-    objusers.users.push(user);
+    objusers.push(user);
     localStorage.setItem('userCadastrados', JSON.stringify(objusers))
 }
 

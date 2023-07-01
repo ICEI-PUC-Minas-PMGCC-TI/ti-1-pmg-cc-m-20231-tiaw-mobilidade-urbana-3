@@ -1,4 +1,12 @@
 
+.registroh2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+}
+.nomelabel{
+    width: 100%;
+    display: block;
+  }
 .users {
     display: grid;
     grid-template-columns: 1fr;
@@ -7,6 +15,39 @@
     list-style: none;
     
 }
+#registropassageiro > input{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin-bottom:10px;
+}
+#registropassageiro label{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+   text-align: left;
+}
+#btnIncluirRegistro{
+    display: inline-block; 
+    width: 350px; 
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+#btnIncluirRegistro:hover{
+    transition: 0.5s;
+    background-color: #45a049;
+}
+
 
 .passageiro {
     background-color: #98d5d7; 
@@ -33,6 +74,11 @@
 @media screen and (min-width: 576px) {
     .users {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 400px) {
+    #btnIncluirRegistro{
+        width: 200px;
     }
 }
 

@@ -30,6 +30,7 @@ const novo_motorista = () => {
 
 function inserir_passageiro() {
     let objData = JSON.parse(localStorage.getItem("userCadastrados"))
+    let pass = novo_passageiro();
     if(objData) {
         objData.push(pass)
         salvarDados(objData)

@@ -20,9 +20,9 @@ function salvarDados (data) {
 function getUserLogged() {
     objUser = localStorage.getItem('logged')
     if(objUser) {
-        var user = JSON.parse(objUser)
+        var userLogged = JSON.parse(objUser)
     }
-    return user
+    return userLogged
 }
 
 if(document.getElementById('btnIncluirPassageiro')) document.getElementById('btnIncluirPassageiro').addEventListener('click', inserir_passageiro)

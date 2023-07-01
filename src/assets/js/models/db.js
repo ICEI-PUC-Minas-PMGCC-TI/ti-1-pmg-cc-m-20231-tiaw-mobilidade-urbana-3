@@ -109,7 +109,6 @@ const objMotorista = {
     ]
 }
 
-
 function loadDb() {
     let cond = localStorage.getItem('userCadastrados')
     if(!cond){

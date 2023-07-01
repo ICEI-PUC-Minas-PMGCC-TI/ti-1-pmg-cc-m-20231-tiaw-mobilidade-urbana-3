@@ -32,7 +32,7 @@ function inserir_passageiro() {
     let objData = JSON.parse(localStorage.getItem("userCadastrados"))
     let pass = novo_passageiro();
     if(objData) {
-        salvarDados(pass)
+        updateDB(pass);
     }
 
 }
@@ -41,7 +41,7 @@ function inserir_motorista() {
     let objData = JSON.parse(localStorage.getItem("userCadastrados"))
     let pass = novo_motorista();
     if(objData) {
-        salvarDados(pass)
+        updateDB(pass);
     }
 
 }

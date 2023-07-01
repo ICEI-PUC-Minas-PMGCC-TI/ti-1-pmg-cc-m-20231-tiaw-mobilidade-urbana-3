@@ -109,6 +109,12 @@ const objMotorista = {
     ]
 }
 
+function updateDB(user) {
+    let objusers = JSON.parse(localStorage.getItem('userCadastrados'))
+    objRotas.push(user);
+    localStorage.setItem('userCadastrados', JSON.stringify(objRotas))
+}
+
 function loadDb() {
     let cond = localStorage.getItem('userCadastrados')
     if(!cond){

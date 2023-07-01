@@ -31,12 +31,11 @@ const novo_motorista = () => {
 function inserir_passageiro() {
     let objData = JSON.parse(localStorage.getItem("userCadastrados"))
     let pass = novo_passageiro();
-    if(objData) {
-        objData.push(pass)
-        salvarDados(objData)
-    } else {
+    if(!objData) {
         loadDb()
-        inserir_passageiro()
+        inserir_passageiro(pass)
+    } else {
+        inserir_passageiro(pass)
     }
 }
 

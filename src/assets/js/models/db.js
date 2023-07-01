@@ -1,4 +1,3 @@
-let motoristaIDs = 5
 let userIds = 4
 
 const db = {
@@ -111,8 +110,8 @@ const objMotorista = {
 
 function updateDB(user) {
     let objusers = JSON.parse(localStorage.getItem('userCadastrados'))
-    objRotas.users.push(user);
-    localStorage.setItem('userCadastrados', JSON.stringify(objRotas))
+    objusers.users.push(user);
+    localStorage.setItem('userCadastrados', JSON.stringify(objusers))
 }
 
 function loadDb() {

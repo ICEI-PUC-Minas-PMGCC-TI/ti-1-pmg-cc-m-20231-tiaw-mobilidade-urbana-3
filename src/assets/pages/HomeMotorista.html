@@ -15,11 +15,10 @@
   </head>
   
   <body>
-    <h1>Passageiros Cadastrados</h1>
+    <h1 class="h1passageiros">Passageiros Cadastrados</h1>
     <ul id="passageiros"></ul>
-
-    <h2>Adicionar Passageiro</h2>
-   
+    <div class="container2">
+    <h2 class="h2passageiros">Adicionar Passageiro</h2>
 	<form id="form-passageiro">
       <label for="input-nome">Nome:</label>
       <input type="text" id="input-nome" required>
@@ -36,10 +35,13 @@
       <label for="input-datahora">Data e Hora:</label>
       <input type="datetime-local" id="input-datahora" required>
       <br>
-      <button type="submit">Adicionar</button>
+      <div id="btnadicionardiv">
+      <button id="btnadicionar" type="submit">Adicionar</button>
+    </div>
+  </div>
     </form>
-
-    <h2>Editar Passageiro</h2>
+    <div class="container2">
+    <h2 class="h2passageiros">Editar Passageiro</h2>
   
 	<form id="form-editar">
       <label for="input-id-editar">ID do Passageiro:</label>
@@ -60,17 +62,23 @@
       <label for="input-datahora-editar">Data e Hora:</label>
       <input type="datetime-local" id="input-datahora-editar" required>
       <br>
-      <button type="submit">Editar</button>
+      <div id="btnadicionardiv">
+      <button id="btnadicionar" type="submit">Editar</button>
+    </div>
     </form>
-
-    <h2>Remover Passageiro</h2>
+  </div>
+    <div class="container2">  
+    <h2 class="h2passageiros">Remover Passageiro</h2>
     
 	<form id="form-remover">
       <label for="input-id-remover">ID do Passageiro:</label>
       <input type="number" id="input-id-remover" required>
       <br>
-      <button type="submit">Remover</button>
+      <div id="btnadicionardiv">
+      <button id="btnadicionar" type="submit">Remover</button>
+    </div>
     </form>
+  </div>
 		
 		<script src="assets/js/rota-utils/crudMotorista.js"></script>
   </body>

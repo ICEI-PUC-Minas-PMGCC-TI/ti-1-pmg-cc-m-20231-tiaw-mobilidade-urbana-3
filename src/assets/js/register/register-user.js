@@ -32,20 +32,16 @@ function inserir_passageiro() {
     let objData = JSON.parse(localStorage.getItem("userCadastrados"))
     let pass = novo_passageiro();
     if(objData) {
-        inserir_passageiro(pass)
-    } else {
-        loadDb()
-        inserir_passageiro(pass)
+        salvarDados(pass)
     }
+
 }
 
 function inserir_motorista() {
     let objData = JSON.parse(localStorage.getItem("userCadastrados"))
     let pass = novo_motorista();
-    if(!objData) {
-        loadDb()
-        inserir_passageiro(pass)
-    } else {
-        inserir_passageiro(pass)
+    if(objData) {
+        salvarDados(pass)
     }
+
 }

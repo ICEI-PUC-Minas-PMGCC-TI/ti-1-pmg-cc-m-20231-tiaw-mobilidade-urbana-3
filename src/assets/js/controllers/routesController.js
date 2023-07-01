@@ -47,10 +47,8 @@ function hideMoreInfos( btn_show_more ) {
 function loadMyRoutes() {
     let html = document.getElementById('ol-myroutes')
     let strHtml = ''
-    let routes = [] = user.rotasCadastradas.rotas
-    
     if(user.rotasCadastradas.rotas[0] != null) {
-        for(i=0; i < user.rotasCadastradas.rotas.length; i++) {
+        for(i=1; i < user.rotasCadastradas.rotas.length; i++) {
             strHtml += `<li id="li-routes">
                             <a id="origem-value">Origem:
                                 <p>${user.rotasCadastradas.rotas[i].origem}</p>

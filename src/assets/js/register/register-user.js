@@ -43,5 +43,4 @@ function inserir_motorista() {
     if(objData) {
         updateDB(pass);
     }
-
 }

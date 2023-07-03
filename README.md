@@ -20,7 +20,7 @@ O grupo decidiu montar um software para fazer a ligação de passageiros e motor
 
 * Acesse ao link para visualizar o software: https://icei-puc-minas-pmgcc-ti.github.io/ti-1-pmg-cc-m-20231-tiaw-mobilidade-urbana-3/
 
-## Assista nosso video. Mostrando o site
+## Assista nosso video de apresentação do site.
 
 * https://youtu.be/qYGlprZxRDI
 

@@ -30,6 +30,13 @@ const db = {
             userName:"Roger Guedes",
             typeUser:"Passageiro"
         },
+        {
+            userId:5,
+            email:"motorista@gmail.com",
+            senha:"123",
+            userName:"motora",
+            typeUser:"motorista"
+        },
     ]
 }
 
